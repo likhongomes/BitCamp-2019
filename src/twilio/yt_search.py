@@ -1,18 +1,8 @@
 #!/usr/bin/env python3
-
-import bs4
-import socket
 import time
-import requests
-import urllib.parse
 from twilio.rest import Client
 from youtube import youtube_search
 from twilio.twiml.messaging_response import MessagingResponse
-#from twillioSide import push_to_db
-
-
-import requests
-import json
 
 # global variable to stop the spamming of API calls
 message_id = 0
