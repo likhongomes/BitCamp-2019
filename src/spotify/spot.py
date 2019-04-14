@@ -2,6 +2,8 @@
 import spotipy
 from spotipy import util
 
+username = "128501948"
+
 
 def show_tracks(tracks):
     for i, item in enumerate(tracks['items']):
@@ -10,15 +12,22 @@ def show_tracks(tracks):
                                     track['name']))
 
 
-def add_to_playlist(track_id, playlist_name="", create_bool=False):
-    username = "128501948"
+def list_playlists():
+    scope = 'playlist-modify-public'
+    token = util.prompt_for_user_token(
+        username, scope, client_id="d1e6626ccc62404b98c29295a998a578", client_secret="8d48393fd316432db8b2a40c99662c25", redirect_uri="https://open.spotify.com/playlist/5yBW13vPeKHCYENcMvOirv")
 
+    sp = spotipy.Spotify(auth=token)
+    playlists = sp.user_playlists(username)
+
+
+def add_to_playlist(track_id, playlist_name="", create_bool=False):
     scope = 'playlist-modify-public'
     token = util.prompt_for_user_token(
         username, scope, client_id="d1e6626ccc62404b98c29295a998a578", client_secret="8d48393fd316432db8b2a40c99662c25", redirect_uri="https://open.spotify.com/playlist/5yBW13vPeKHCYENcMvOirv")
 
     # test playlist id [tommy's hardcoded]
-    playlist = "spotify:user:128501948:playlist:2dxSgUcvS26JfEngwD2Vz4"
+    playlist = "spotify:user:128501948:playlist:2xiBCO9WzBlYqE70z9MaUo"
 
     # test adding track to playlist
     #track_id = ["5CXmbqFE0mRXOYXgEze8q3"]
