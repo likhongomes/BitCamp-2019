@@ -1,2 +1,4 @@
-# BitCamp-2019
-Code for BitCamp 2019
+# User-Generated Music Player
+
+## By Tommy, Ian, and Likhon
+

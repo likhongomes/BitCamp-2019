@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tcnj-music-player",
+  "private_key_id": "a4e951400d4ce9bf4c3ae64536e98106509657b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBcYxm+GitE311\neIKDGhngJFWKYZmwdtW4YXf1qlR26IpPk0a+a8sj7HOkElzNu0XphBWy+5X5PAXa\nZCuL7/bxw8UlljUpyoa5rUhkbPzw2gtHXRx25Ke1fsM5gwiG9oYxNYfcY8rutYYJ\nmcevyrm1RXrv3eeaKhKzAeLQJVjLaQjRHRXDGtwlJcdiocc2E/idjyIKEjubAsOQ\niCPxGj/hle0Jsw9K55wvPgVroX/bkf1HoJ2r2KAq21O2VqrndqCoPQfXfE63X6kr\ng+M94vW63Xc2241ybCzuVvRVh2vOqGvDzCis/o+fB+i6AYsQic++fuIWEyRs8KUn\nnXLBLch1AgMBAAECggEAEIdJT4w+tJ8hzQiiRvc5dvkTyzjVeKPGu7QUTswIq7pP\naxPMUfC3t3Be9yNpUfWduFSq9/nE+DoKzZZZt2GMqfhBkmZLUTCDvD5UNt4Ut+c7\nJ62+HpVUYRuDxpiHTeTaVXHbk6PkaIR5GSPn6ugGLLkGYC1uBxjWM5Zf92UuUsuw\nk0mCeL4TBGSiDXyD2krn4CEeqLy3Ei1Y02lol8kbjt9tphHgT+OBTqx186Ug2uqL\nNpYkAQ8y1KouCYzYghhwO+0TZBSWwh4cpV/zj9omdOKrfSnBJwVopTA8mjYAqGQl\nWRT2A2ahVoNfPIQyUZk4CZJaFlCa7JcLUaziVRLANwKBgQDiX40JYBmTyRZdZvuL\nJ8QzfHEz2cSe4pMngcjLgFpU6jSJa5y9Vw1fGt8/VxI/4oFlqGwDZhqi0ZbxSn7m\ntDLzqMtdmUogYN8iuoacyjSHI4PTkRbTprakwYLDEBBNyvdIMhOZQmF5zMN3ufae\nBo1tdD+gNZc592/XOrSm/A9LgwKBgQDawrcUIiKr4u1GdKUNpgPtbCgVqsQJVH5p\nnG+NH+nPhy2v5V9Faf9aA8DuVWjgEPmG3rHFWe9jFEoLSdI7ZUa99K6MvnNfDaiK\n7UG3TtxNw9TR0Lsm54eOX9qpbAEYqnUQu4975IBnxWzQ7/CSvVJe9ADChnovnD/g\nh/+ol8mCpwKBgEipOvADdLJHHXKll6A3B3cvPnbSM5Z8S5emxPjtHhGbi3mAnTL5\nOkWIrpf6LtVqsvYadXEx2OLiO3z/2HPc623ihERq66ww6+6NyJ+TGAE4mRvTumv9\nWyrPIlXSViliOLVnvXq4H+mknClV+58Fo2e6pKGcEgp9Ldz77viad55ZAoGADWpR\ndd+eBrJ04JQ4pvyeUwoF70Y4nWXcFrfsM1hYq0xb5eSIEias7SU7yKHeO5du5fF0\nL2kTgBz3aXfOd6v/SZjet2zagGLDCjoAhLBGXFJ9E5zcTUd3jaidLTSdYJjbcvo9\nk1hw82ws/ycntqf7jC0keslqZs8LL8bHS9x7FBMCgYEAmfptgo0Wsu4yDfJMBT/+\nkuJXOlzfg2mcAu2A9LX0BF20eAikWbBSK4Lz30PZwKZAKX4vDcu61h1lGWuymURq\nuqoqCuqq9XbwFbsU4S6WXIHskT5o4L9Fz/OmypUSsaHkP90WjUJMa0t2sK5o1cAD\nLcwBLlyXBU4cA/fOJoP0cBY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tcnjmusicplayer@tcnj-music-player.iam.gserviceaccount.com",
+  "client_id": "104042249591804742972",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tcnjmusicplayer%40tcnj-music-player.iam.gserviceaccount.com"
+}
