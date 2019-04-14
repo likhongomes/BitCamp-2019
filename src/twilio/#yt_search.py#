@@ -6,7 +6,6 @@ from twilio.twiml.messaging_response import MessagingResponse
 # global variable to stop the spamming of API calls
 message_id = 0
 
-
 def search():
     global message_id
 
