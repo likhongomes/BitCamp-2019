@@ -125,7 +125,7 @@ def search_song(song_input):
     client_credentials_manager = SpotifyClientCredentials(
         client_id="d1e6626ccc62404b98c29295a998a578", client_secret="8d48393fd316432db8b2a40c99662c25")
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    results = sp.search(q=song_input, limit=5)
+    results = sp.search(q=song_input, limit=10)
     counters = 0
     song_list = []
     artist_list = []

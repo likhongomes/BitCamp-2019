@@ -78,14 +78,7 @@ def add_to_playlist(track_id, playlist_name="", create_bool=False):
 
         ''' reads from playlist '''
         # this gets the playlist URI
-        playlist = sp.user_playlist(username, playlist, fields="tracks,next")
-
-        counter = 0
-        for k, v in playlist.items():
-            for i in range(len(v['items'])):
-                print("\n")
-                print(v['items'][i]['track']['name'])
-                counter += 1
+        #playlist = sp.user_playlist(username, playlist, fields="tracks,next")
 
     else:
         print("Can't get token for", username)
