@@ -4,6 +4,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client
 from spot import add_to_playlist
 from spot import list_playlists
+from spot import change_playlists
 import spotipy
 from spotipy import util
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -15,6 +16,7 @@ auth_token = 'bd035778a88f156ed5a40acefb612c3a'
 client = Client(account_sid, auth_token)
 playlist_name = ""
 counter = 0
+valid_bit = 0
 create_bool = False
 d = {}
 
@@ -26,6 +28,7 @@ def sms_ahoy_reply():
     global d
     global create_bool
     """Respond to incoming messages with a friendly SMS."""
+    global valid_bit
     text = ""
     # Start our response
     resp = MessagingResponse()
@@ -33,6 +36,29 @@ def sms_ahoy_reply():
     song_input = message[0].body
 
     song_input = song_input.lower()
+
+    if song_input == 'change playlist':
+        text = "-Changing to a Playlist- -\n\nPlease Enter Playlist Name"
+        valid_bit = 1
+        resp.message(text)
+        return str(resp)
+
+    if song_input in list_playlists() and valid_bit == 1:
+        change_playlists(song_input)
+        print("Successfully changed to ", song_input)
+        valid_bit = 0
+        text = "Successfully changed to " + song_input
+        resp.message(text)
+        return str(resp)
+
+    if song_input == "ls playlist":
+        string = ""
+        playlists = list_playlists()
+        for i in playlists:
+            string += "" + i + "\n"
+        resp.message(string)
+        print(playlists)
+        return str(resp)
 
     if song_input == "new playlist":
         counter = 1
@@ -68,13 +94,15 @@ def sms_ahoy_reply():
             temp += 1
         text += "Choose the number!"
         resp.message(text)
+        return str(resp)
     else:
-        print("DIS IS HERE", type(song_input))
-        print(d)
         add_to_playlist(track_id=d[int(song_input)],
                         create_bool=create_bool, playlist_name=playlist_name)
+        print("Added the song", d[int(song_input)])
+        text = "Added the song " + str(song_input)
         create_bool = False
-    print(d)
+        resp.message(text)
+        return str(resp)
     return str(resp)
 
 
