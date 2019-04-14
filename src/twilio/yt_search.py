@@ -7,7 +7,8 @@ import requests
 import urllib.parse
 from twilio.rest import Client
 from youtube import youtube_search
-from twillioSide import push_to_db
+from twilio.twiml.messaging_response import MessagingResponse
+#from twillioSide import push_to_db
 
 
 import requests
@@ -21,8 +22,6 @@ def search():
     global message_id
 
     # Your Account Sid and Auth Token from twilio.com/console
-    copy = ""
-    date = ''
     account_sid = 'ACf797a6b1926d1b042838e6823133f2ab'
     auth_token = 'bd035778a88f156ed5a40acefb612c3a'
     client = Client(account_sid, auth_token)
@@ -47,7 +46,8 @@ def search():
                 video_link.append(temp)
 
             print("THIS IS YT SEARCH", video_link[0])
-            push_to_db(str(video_link[0]))
+            # Start our response
+        # push_to_db(str(video_link[0]))
         message_id = first
 
 
