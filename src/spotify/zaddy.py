@@ -56,16 +56,16 @@ def sms_ahoy_reply():
         return str(resp)
     if song_input.isdigit() is not True:
         print(song_input)
-        song_list, song_ids = search_song(song_input)
+        song_list, song_ids, artist_list = search_song(song_input)
         for i in range(len(song_list)):
             d[i] = [str(song_ids[i])]
 
             text = "-Response- -\n"
             temp = 0
-            for song in song_list:
+        for song in range(len(song_list)):
                 # Add a message
-                text += str(temp) + " " + song + '\n'
-                temp += 1
+            text += str(temp) + ". " + song_list[song] + ' (' + artist_list[song] + ')' + '\n'
+            temp += 1
         text += "Choose the number!"
         resp.message(text)
     else:
@@ -100,15 +100,17 @@ def search_song(song_input):
     results = sp.search(q=song_input, limit=5)
     counters = 0
     song_list = []
+    artist_list = []
     song_ids = []
     for k, v in results.items():
         for i in v['items']:
             song_list.append(i['name'])
             song_ids.append(i['id'])
+            artist_list.append(i['artists'][0]['name'])
             counters = counters + 1
         counters = 0
 
-    return song_list, song_ids
+    return song_list, song_ids, artist_list
 
 
 if __name__ == "__main__":
