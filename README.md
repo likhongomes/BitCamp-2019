@@ -1,4 +1,4 @@
-# User-Generated Music Player
+# Spotify Playlist Collaborator
 
-## By Tommy, Ian, and Likhon
+## By Tommy, Likhon, Zach and Bella
 
